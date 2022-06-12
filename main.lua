@@ -21,10 +21,6 @@ local allowGuestChat = false
 pluginPath = debug.getinfo(1).source:gsub("\\","/")
 pluginPath = pluginPath:sub(2,(pluginPath:find("main.lua"))-2)
 
-package.path = package.path .. ";;" .. pluginPath .. "/?.lua;;".. pluginPath .. "/lua/?.lua"
-package.cpath = package.cpath .. ";;" .. pluginPath .. "/?.dll;;" .. pluginPath .. "/lib/?.dll"
-package.cpath = package.cpath .. ";;" .. pluginPath .. "/?.so;;" .. pluginPath .. "/lib/?.so"
-
 function trim(s)
   -- from PiL2 20.4
   return (s:gsub("^%s*(.-)%s*$", "%1"))
