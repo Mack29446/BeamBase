@@ -20,6 +20,7 @@ local allowGuestChat = false
 
 pluginPath = debug.getinfo(1).source:gsub("\\","/")
 pluginPath = pluginPath:sub(1,(pluginPath:find("main.lua"))-2)
+if pluginPath:sub(1,1) == '@' then pluginPath = pluginPath:sub(2) end
 
 function trim(s)
   -- from PiL2 20.4
