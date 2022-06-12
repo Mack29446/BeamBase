@@ -19,7 +19,7 @@ local allowGuestChat = false
 --=================================================================
 
 pluginPath = debug.getinfo(1).source:gsub("\\","/")
-pluginPath = pluginPath:sub(2,(pluginPath:find("main.lua"))-2)
+pluginPath = pluginPath:sub(1,(pluginPath:find("main.lua"))-2)
 
 function trim(s)
   -- from PiL2 20.4
